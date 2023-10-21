@@ -336,7 +336,7 @@ counter-reset: #6E6E73;
 margin-bottom: 40px;
  }
  .network{
-    margin-bottom: 100px;
+    margin-bottom: 70px;
 }
 
  
@@ -349,6 +349,9 @@ margin-bottom: 40px;
     letter-spacing: 0.23100000619888306px;
     color: #0066CC;
     margin: 0px 30px;    
+}
+.compare-all{
+   margin-bottom: 50px;
 }
  
 
