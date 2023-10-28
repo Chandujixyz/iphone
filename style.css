@@ -5,12 +5,11 @@
 }
 body,
 html {
-  /* height: 100%; */
-  /* margin: 0rem; */
   overflow-x: hidden;
-  /* display: flex; */
-  /* flex-direction: column; */
 }
+::-webkit-scrollbar{
+    display: none;
+ }
 a{
     text-decoration: none;
     color: #FFFFFF;
@@ -280,8 +279,7 @@ color: #1D1D1F;
     gap: 50px;
     width: 70%;
     margin: auto;
-    /* grid-auto-flow: column; */
-    background-color: #2CA2B4;
+/*     background-color: #2CA2B4; */
   
  }
 
