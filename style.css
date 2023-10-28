@@ -1,11 +1,15 @@
-*{
+ *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 body,
 html {
+  /* height: 100%; */
+  /* margin: 0rem; */
   overflow-x: hidden;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 a{
     text-decoration: none;
@@ -14,7 +18,7 @@ a{
 
 /* ++++++++++++ NavBar ++++++++++++++++++ */
 nav{
-    height: 160px;
+  height:160px;
 
 }
 nav>ul{
@@ -24,34 +28,47 @@ nav>ul{
     background: #000000CC;
     padding: 0px 10vw;
     list-style: none;
-    height: 44px;
+    height:44px;
     font-size: 16px;
     font-weight: 400;
     flex-wrap: wrap;
 }
-#List-of-Products{
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 16px 12vw;
-flex-wrap: wrap;
+
+
+#List-of-Products {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* This allows horizontal scrolling */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    width: 80%; /* Use the full width of the screen */
+    margin: auto;
 }
-.item{
+
+.item {
     text-align: center;
+    min-width: 100px; /* Set a minimum width for each item to prevent them from collapsing */
+    /* padding: 16px;   */
 }
-#List-of-Products>h3{
-font-size: 12px;
-font-weight: 400;
-line-height: 16px;
-letter-spacing: -0.11999999731779099px;
+
+#List-of-Products > h3 {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: -0.11999999731779099px;
 }
-.new-r{
-font-size: 12px;
-font-weight: 400;
-line-height: 12px;
-letter-spacing: -0.07999999821186066px;
-color: #BF4800;
+
+
+.new-r {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: -0.07999999821186066px;
+    color: #BF4800;
 }
+
  
 /* ********************************************************************** */
 /* ++++++++++  Image section +++++++++*/
@@ -174,6 +191,7 @@ letter-spacing: 0.23100000619888306px;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
+    flex-wrap: wrap;
     padding: 10px;
 }
 #third-img>div{
@@ -210,6 +228,7 @@ padding: 20px;
     top: 41%;
     left: 0px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     padding: 0px 230px;
     text-align:start;
@@ -242,7 +261,8 @@ color: black;
 /* ***************************************************************************** */
 /* ++++++++++++ Comparison +++++++ */
 #Product-Comparison{
-text-align: center;
+ text-align: center;
+
 }
 #Product-Comparison>h1{
 margin: 100px;
@@ -253,15 +273,29 @@ letter-spacing: -0.14399999380111694px;
 color: #1D1D1F;
 
 }
- .Comparison{
-    width: 70vw;
-    margin: auto;
+ .Comparison1{
     display:grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(9,auto);
-    row-gap: 50px;
-    column-gap: 50px;
+    gap: 50px;
+    width: 70%;
+    margin: auto;
+    /* grid-auto-flow: column; */
+    background-color: #2CA2B4;
+  
  }
+
+ .Comparison2,.Comparison3{
+    display:none;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(9,auto);
+    gap: 50px;
+    width: 70%;
+    margin: auto;
+    grid-auto-flow: column;
+  
+ }
+ 
 /*                 phone name                 */
  .phone-name,.network{
 display: flex;
@@ -350,14 +384,14 @@ margin-bottom: 40px;
     color: #0066CC;
     margin: 0px 30px;    
 }
-.compare-all{
-   margin-bottom: 70px;
-}
  
+.compare-all{
+   margin-bottom: 50px;
+}
 
  /* ****************************************************************** */
 main{
-/*     display:none; */
+    /* display: none; */
     background-color:#f2f2f2;
     width: 100vw;
     margin-top: 120px;
@@ -436,6 +470,7 @@ margin: 10px;
 .way-plateform{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 20px 50px;
 }
@@ -469,8 +504,11 @@ letter-spacing: -0.37400001287460327px;
 /* +++++++++++++++++ Two-colom-card+++++++++++++++++++++++ */
 
 #Two-colom-card{
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
 }
 .first-colom{
     display: flex;
@@ -529,7 +567,6 @@ margin-bottom: 50px;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url(./image/new4.png);
-    padding: 0px 660px;
     margin-top: 15px;
 }
 #Why-Apple-card>h1{
@@ -540,6 +577,7 @@ margin-bottom: 50px;
     text-align: center;
     color: #1D1D1F;  
     margin-bottom: 20px;
+    width: 560px;
 }
 #Why-Apple-card>p{
     font-size: 21px;
@@ -549,6 +587,7 @@ margin-bottom: 50px;
     text-align: center;
     color: #1D1D1F;
     margin-bottom: 20px;
+    width: 460px;
     
 }
 
@@ -561,6 +600,7 @@ margin-bottom: 50px;
 #accessories-first-card{
     display: flex;
      align-items: center;
+     flex-wrap: wrap;
     justify-content: space-evenly;
     background-color: #FFFFFF;
     padding-top: 50px;
@@ -597,14 +637,13 @@ margin: 10px;
 #accessories-second-card{
     display: flex;
     align-items: center;
-   justify-content: space-between;
+    flex-wrap: wrap-reverse;
+   justify-content:space-betweens;
    background-color: #FFFFFF;
    margin: 7px 0px;
    
 }
-#accessories-second-card>div{
-    padding:0px 200px ;
-}
+ 
 #accessories-second-card>div>p{
     width: 400px;
 }
@@ -628,6 +667,7 @@ margin: 50px;
 #accessories-four-card>div{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content:space-evenly;
     padding: 50px;
 }
@@ -647,25 +687,28 @@ color: #1D1D1F;
  text-align: center;
  
 }
+ 
 .what-first-card-first-row{
     display: flex;
     flex-direction: column;
     height: 500px;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    background-color: palevioletred;
+    /* justify-content: center; 
+    align-items: center; */
+    background-image: url(./image/div\ \(8\).png);
+    background-position: center center;
+
     margin: 20px 0px;
 }
  
  .what-first-card-second-row{
-background-color: #FFFFFF;
-width: fit-content;
-justify-content: center;
-align-items: center;
-display: flex;
-flex-direction: column;
-margin:auto;
+
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ background-color:#FFFFFF;
+ width:700px;
+ margin: auto;
 
  }
  .what-first-card-second-row>h2{
@@ -677,6 +720,7 @@ margin:auto;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
+    flex-wrap: wrap-reverse;
     width: 100%;
     padding: 100px 0px;
     background-color: #FFFFFF;
@@ -699,6 +743,7 @@ margin:auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(3,1fr);  
+    /* height: 700px; */
 }
 #tv{
     background-color: black;
@@ -709,6 +754,7 @@ margin:auto;
     align-items: center;
     justify-content: center;
     flex-direction:column;
+    width: 100%;
 }
 #tv>p,#news>p{ 
 font-size: 21px;
@@ -724,13 +770,6 @@ margin: 10px;
 #tv>div{
 margin-bottom: 50px;
  }
- .scrol-tv-row{
-    margin-top: 10px ;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-
- }
-
 .bw{
     background-color: #FFFFFF;
 }
@@ -759,10 +798,41 @@ margin-bottom: 10px;
 }
 
 #news{
-    background-color: red;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    background-image: url(./image/div\ \(7\).png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#news>div{
+    margin-top: 150px;
+}
+#news a{
+font-size: 21px;
+font-weight: 400;
+line-height: 29px;
+letter-spacing: 0.23100000619888306px;
+text-align: center;
+color: #F5F5F7;
+
+}
+#news>div p{ 
+width: 500px;
+font-size: 21px;
+margin-bottom: 10px;
+font-weight: 400;
+line-height: 29px;
+letter-spacing: 0.23100000619888306px;
+text-align: center;
+color: #F5F5F7;
+
 }
 #Arcade{
-    background-color: orangered;
+    background-image: url(./image/div\ \(6\).png);
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 #Arcade>p{
   width: 320px;
@@ -782,6 +852,7 @@ margin-bottom: 10px;
     display: flex;
     align-items: center;
     justify-content:space-evenly;
+    flex-wrap: wrap;
     padding-top: 100px;
     margin-top: 10px;
     width: 100%;
@@ -794,9 +865,9 @@ margin-bottom: 10px;
 /* +++++++++++++++++++++++++ footer +++++++++++++++++++++++++ */
 
 footer{
-/*     display: none; */
     width: 50vw;
     margin: auto;
+    /* display: none; */
 }
 footer p{
 font-size: 12px;
@@ -873,5 +944,220 @@ color: #0066CC;
  }
  .bor{
     border-right: 1px solid #e4e4e4;
-    padding: 10px;
+    padding: 0px 10px;
  }
+
+ @media screen and (max-width: 1000px) {
+    /* ++++++++++++ NavBar ++++++++++++++++++ */
+
+.for1000{
+        display:none;
+        }
+
+#List-of-Products {
+    width: 100%;  
+}
+
+.Comparison1{
+    gap: 5px;
+    width: 100%;
+ }
+
+ .Comparison2,.Comparison3{
+    display:none;
+ }
+ main{
+    padding:33px 0px;
+}
+
+#WOW{
+    height:1000px ;
+    flex-wrap: wrap-reverse;
+    text-align: center;
+}
+#way-card>h2{
+    font-size: 25px;
+    line-height: 25px;
+    margin: 10px 0px;
+    }
+    #way-card{
+        padding: 5px; 
+    }
+
+    #Why-Apple-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+       background-position: center center;
+        /* background-size: cover; */
+        background-repeat: no-repeat;
+        background-image: url(./image/new4.png);   
+        width: 100%;
+        height: 560px;
+        margin: 15px auto;
+    }
+  
+
+    #Why-Apple-card>h1{
+        font-size: 30px;
+        line-height: 30px;
+        width: 300px;
+    }
+    #Why-Apple-card>p{
+        font-size: 15px;
+        line-height: 15px;
+        width: 280px;
+        
+    }
+
+  
+#accessories-third-card>img{
+height: 350px;
+}
+
+
+ 
+ }
+
+ @media screen and (max-width: 1150px) {
+    #Two-colom-card{
+        flex-wrap: wrap;
+            }
+
+            .f-c{
+                margin:10px 0px;
+            }
+            .s-c{
+                margin:10px 0px;
+            }
+    
+        
+ }
+
+ @media screen and (max-width: 700px) {
+    .Comparison1{
+      display: none;
+     }
+    .Comparison2,.Comparison3{ 
+     display:grid;
+     width: 100%;
+      column-gap: 5px;
+     }
+    .first-colom>h1{
+        font-size: 30px;
+        line-height: 26px;
+        margin-bottom: 10px;
+        }
+        .first-colom>p{
+        font-size: 15px;
+        line-height: 15px;
+        width: 300px;
+      
+        }
+        #accessories-second-card>img{
+            height: 320px;
+               
+           }
+
+           #accessories-first-card>img{
+           height: 320px;
+           }
+           #accessories-second-card>div>p{
+            width: 280px;
+        }
+          
+#accessories-third-card>img{
+    height: 250px;
+    }
+
+    .what-first-card-second-row>h2{
+    font-size: 30px;
+    line-height: 30px;
+    width: 300px;
+        }
+        .what-first-card-second-row{
+        width: 100%;    
+                }
+                .what-first-card-second-row>img{
+                height: 200px;
+                }   
+     .what-second-card-first-row>img{
+            height: 200px;
+        }  
+        .what-second-card-first-row>div>img{
+            height: 50px;
+        }   
+        .what-second-card-first-row>div>p{
+        width: 300px;
+        }   
+        
+ }
+
+ @media screen and (max-width: 1360px) {
+
+ #accessories-second-card{
+   justify-content:center;
+    
+}
+
+#what-second-card-grid{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(6,1fr);  
+    
+}
+footer{
+    width: 80vw;
+    margin: auto;
+}
+footer p{
+font-size: 10px;
+line-height: 14px;
+}
+#fourth-img>div{
+    padding: 0px 100px;  
+} 
+}
+@media screen and (max-width: 733px) {
+ .notshow734{
+    display: none;
+ }
+ footer{
+    width: 100vw;
+    
+}
+footer p{
+font-size: 8px;
+line-height: 10px;
+}
+.x{
+    height: 400px;
+}
+}
+@media screen and (max-width: 614px) {
+    .notshow614{
+       display: none;
+    }
+    .x{
+        height: 200px;
+    }
+    .v{
+        height: 400px;
+    }
+    
+
+   }
+   @media screen and (max-width: 800px) {
+   #fourth-img>div>h1{
+    font-size: 30px;
+    line-height: 30px;
+   } 
+   #fourth-img>div>p{
+    font-size: 15px;
+    line-height: 15px;
+   } 
+   #fourth-img>div{
+    padding: 0px 30px;
+   }
+   }
